@@ -1,4 +1,3 @@
-# require_relative 'leaderboard'
 class Team
   # YOUR CODE GOES HERE
   attr_reader :name
@@ -13,8 +12,4 @@ class Team
   def self.title
     ["| ", "Name       ", "Rank    ", "Total Wins    ", "Total Losses", " |"]
   end
-
-  # def summary
-  #   ["| ", @name, @rank, @wins, @losses, " |"]
-  # end
 end

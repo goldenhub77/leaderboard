@@ -1,5 +1,5 @@
 require 'spec_helper'
-# require_relative '..\..\lib\team'
+require_relative '..\..\lib\team'
 
 RSpec.describe Team do
   let(:team){Team.new("Patriots")}
