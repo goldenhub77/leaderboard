@@ -119,58 +119,8 @@ class Leaderboard
     header.length.times do
       banner += "-"
     end
-    puts banner
-    print header
-    print terminal_team_data
-    print banner
+    final_output = ""
+    final_output += "\n" + banner + "\n" + header + terminal_team_data + banner
+    final_output
   end
-
-  # def summary
-  #   formatted_data = sort_by_wins_then_losses
-  #   final_output = "\n"
-  #   header_titles = {"Name" => 5, "Rank" => 0, "Total Wins" => 0, "Total Losses" => 0}
-  #   total_width = 0
-  #   header_titles.each do |key,value|
-  #     total_width += key.to_s.length+value
-  #   end
-  #   (total_width*2).times do
-  #     final_output += "-"
-  #   end
-  #   final_output += "\n| "
-  #   header_titles.each do |key,value|
-  #     final_output += "#{key}"
-  #     (key.to_s.length+value).times do
-  #       final_output += " "
-  #     end
-  #   end
-  #   (header_titles.length-4).times do
-  #     final_output += " "
-  #   end
-  #   final_output += "|\n"
-  #
-  #
-  #   formatted_data.each do |final_team_results|
-  #     team_data_arr = []
-  #     team_data_arr.push(final_team_results.name, final_team_results.rank, final_team_results.wins, final_team_results.losses)
-  #     final_output += "\n| "
-  #     team_data_arr.each.with_index do |team_data, index|
-  #
-  #         final_output += "#{team_data}"
-  #         (header_titles.keys[index].to_s.length+header_titles.values[index]-team_data.to_s.length+header_titles.keys[index].to_s.length).times do
-  #             final_output += " "
-  #         end
-  #
-  #     end
-  #     final_output += "|\n"
-  #   end
-  #
-  #   (total_width*2).times do
-  #     final_output += "-"
-  #   end
-  #   final_output
-  # end
-
 end
-
-leaderboard = Leaderboard.new
-leaderboard.summary

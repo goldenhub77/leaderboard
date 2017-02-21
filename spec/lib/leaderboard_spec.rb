@@ -54,4 +54,15 @@ RSpec.describe Leaderboard do
       end
     end
   end
+
+  describe ".summary" do
+    let(:summary){leaderboard.summary}
+    it "output must be a string" do
+      puts summary
+      expect(summary).to be_a_kind_of(String)
+    end
+    it "output must contain the GAME_INFO which is passed to it" do
+      expect(summary.gsub(" ","")).to include("Name", "Rank", "TotalWins", "TotalLosses", "Patriots130", "Steelers211", "Broncos312", "Colts402")
+    end
+  end
 end

@@ -25,8 +25,10 @@ RSpec.describe Team do
   end
 
   describe ".self.title" do
+    let(:title){Team.title}
     it "should output and array of string header columns for leaderboard" do
-      expect(Team.title).to be_of_instance(Array)
+      expect(title).to be_a_kind_of(Array)
+      expect(title.to_s.strip).to include("Name","Rank","Total Wins","Total Losses")
     end
   end
 end
